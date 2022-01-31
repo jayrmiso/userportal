@@ -3,7 +3,6 @@ import React, {FC} from 'react'
 import {Link} from 'react-router-dom'
 import {useLayout} from '../../../core/LayoutProvider'
 import {usePageData} from '../../../core/PageData'
-
 const DefaultTitle: FC = () => {
   const {pageTitle, pageDescription, pageBreadcrumbs} = usePageData()
   const {config, classes} = useLayout()
@@ -18,7 +17,6 @@ const DefaultTitle: FC = () => {
       {/* begin::Title */}
       {pageTitle && (
         <h1 className='d-flex align-items-center text-dark fw-bolder my-1 fs-3'>
-          {pageTitle}
           {pageDescription && config.pageTitle && config.pageTitle.description && (
             <>
               <span className='h-20px border-gray-200 border-start ms-3 mx-2'></span>
@@ -28,7 +26,7 @@ const DefaultTitle: FC = () => {
         </h1>
       )}
       {/* end::Title */}
-
+        
       {pageBreadcrumbs &&
         pageBreadcrumbs.length > 0 &&
         config.pageTitle &&

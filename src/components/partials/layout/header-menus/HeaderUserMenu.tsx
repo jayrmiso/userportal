@@ -11,7 +11,6 @@ import {toAbsoluteUrl} from '../../../../config/helpers'
 
 const HeaderUserMenu: FC = () => {
   const user: UserModel = useSelector<RootState>(({auth}) => auth.user, shallowEqual) as UserModel
-  console.log(user)
   const dispatch = useDispatch()
   const logout = () => {
     dispatch(auth.actions.logout())

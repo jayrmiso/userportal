@@ -29,13 +29,7 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [
-                    // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
-                    "css-loader",
-                    // Compiles Sass to CSS
-                    "sass-loader",
+                use: ["style-loader", "css-loader", "sass-loader",
                 ],
             },
         ],
@@ -43,11 +37,16 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'userportal',
-            filename: "remoteEntry.js",
+            filename: 'remoteEntry.js',
+            library: { type: 'var', name: 'userportal' },
             remotes: {
+                "testapp": "testapp",
+                "dashboard": "dashboard",
+                "userportal": "userportal"
             },
             exposes: {
-                './Dashboard': './src/app/pages/dashboard/DashboardWrapper.tsx'
+                './style': './src/assets/sass/style.scss',
+                './reactstyle': './src/assets/sass/style.react.scss'
             },
             shared: {
                 ...deps,

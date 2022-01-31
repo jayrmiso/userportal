@@ -14,6 +14,12 @@ export function AsideMenuMain() {
         title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
         fontIcon='bi-app-indicator'
       />
+      <AsideMenuItem
+        to='/vue'
+        icon='/media/icons/duotune/art/art002.svg'
+        title={intl.formatMessage({id: 'MENU.VUE'})}
+        fontIcon='bi-app-indicator'
+      />
     </>
   )
 }
