@@ -12,7 +12,7 @@ import {PrivateRoutes} from './PrivateRoutes'
 import {Logout, AuthPage} from '../modules/auth'
 import {ErrorsPage} from '../modules/errors/ErrorsPage'
 import {MasterInit} from '../../components/layout/MasterInit'
-
+import AnotherReact from '../microapps/AnotherReact'
 const Routes: FC = () => {
   // const isAuthorized = useSelector<RootState>(({auth}) => auth.user, shallowEqual)
   // console.log(isAuthorized)

@@ -40,9 +40,12 @@ module.exports = {
             filename: 'remoteEntry.js',
             library: { type: 'var', name: 'userportal' },
             remotes: {
-                "testapp": "testapp",
-                "dashboard": "dashboard",
-                "userportal": "userportal"
+                // "testapp": "testapp",
+                // "dashboard": "dashboard",
+                // "userportal": "userportal",
+                // "marketing": "marketing",
+                // "host": "host",
+                // "gatsbyhost": "gatsbyhost"
             },
             exposes: {
                 './style': './src/assets/sass/style.scss',

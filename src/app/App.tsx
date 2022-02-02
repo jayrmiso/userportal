@@ -5,6 +5,7 @@ import {LayoutProvider, LayoutSplashScreen} from '../components/layout/core'
 import AuthInit from './modules/auth/redux/AuthInit'
 import {Routes} from './routing/Routes'
 
+import AnotherReact from './microapps/AnotherReact'
 type Props = {
   basename: string
 }
